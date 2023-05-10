@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +46,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConstantInfos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDtos\RequestAdditionalInfoDto.cs" />
+    <Compile Include="RequestDtos\RequestAddressDto.cs" />
+    <Compile Include="RequestDtos\RequestDateDto.cs" />
+    <Compile Include="RequestDtos\RequestAssignResultToDto.cs" />
+    <Compile Include="RequestDtos\RequestClientContextDto.cs" />
+    <Compile Include="RequestDtos\RequestEntityDto.cs" />
+    <Compile Include="RequestDtos\RequestNameDto.cs" />
+    <Compile Include="RequestDtos\RequestRecordDto.cs" />
+    <Compile Include="RequestDtos\RequestSearchConfigurationDto.cs" />
+    <Compile Include="RequestDtos\RequestSearchDto.cs" />
+    <Compile Include="RequestDtos\RequestSearchInputDto.cs" />
+    <Compile Include="ResultDtos\ResultAdverseMediaDto.cs" />
+    <Compile Include="ResultDtos\ResultDOBMatchDto.cs" />
+    <Compile Include="ResultDtos\ResultEnforcementDto.cs" />
+    <Compile Include="ResultDtos\ResultEntityDetailsDto.cs" />
+    <Compile Include="ResultDtos\ResultFileDto.cs" />
+    <Compile Include="ResultDtos\ResultIDDto.cs" />
+    <Compile Include="ResultDtos\ResultAKADto.cs" />
+    <Compile Include="ResultDtos\ResultConflictsDto.cs" />
+    <Compile Include="ResultDtos\ResultDOBDto.cs" />
+    <Compile Include="ResultDtos\ResultMatchDto.cs" />
+    <Compile Include="ResultDtos\ResultMatchStateDto.cs" />
+    <Compile Include="ResultDtos\ResultAdditionalInfoDto.cs" />
+    <Compile Include="ResultDtos\ResultAddressDto.cs" />
+    <Compile Include="ResultDtos\ResultHistoryDto.cs" />
+    <Compile Include="ResultDtos\ResultMatchXMLDto.cs" />
+    <Compile Include="ResultDtos\ResultNameDto.cs" />
+    <Compile Include="ResultDtos\ResultPEPDto.cs" />
+    <Compile Include="ResultDtos\ResultRecordDetailsDto.cs" />
+    <Compile Include="ResultDtos\ResultRecordDto.cs" />
+    <Compile Include="ResultDtos\ResultRecordStateDto.cs" />
+    <Compile Include="ResultDtos\ResultRelationshipDto.cs" />
+    <Compile Include="ResultDtos\ResultSearchDto.cs" />
+    <Compile Include="ResultDtos\ResultSourceItemDto.cs" />
+    <Compile Include="ResultDtos\ResultWatchlistDto.cs" />
+    <Compile Include="SearchService.cs" />
+    <Compile Include="TokenRequester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
