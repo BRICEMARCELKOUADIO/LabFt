@@ -19,15 +19,15 @@ namespace LabFt
         {
             _httpClient = new HttpClient();
             _apiBaseUrl = ConstantInfos.BaseUrl;
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("X-API-Key", ConstantInfos.XAPIKey);
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            _httpClient.DefaultRequestHeaders.Add("X-API-Key", ConstantInfos.XAPIKey);
             
         }
 
         public async Task<List<ResultSearchDto>> GetDataAsync(RequestSearchDto requestData)
         {
-            var requestUrl = $"{_apiBaseUrl}+{ConstantInfos.SearchEndPoint}";
+            var requestUrl = $"{_apiBaseUrl}{ConstantInfos.SearchEndPoint}";
             
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(requestData);
 
