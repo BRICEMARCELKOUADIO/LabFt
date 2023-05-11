@@ -72,7 +72,7 @@ namespace LabFt
 
             var data = await apiClient.GetDataAsync(requestData);
 
-            Console.WriteLine("Token = " + accessToken);
+            Console.WriteLine("Terminé avec succès");
             Console.ReadLine();
         }
     }

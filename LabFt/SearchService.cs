@@ -25,7 +25,7 @@ namespace LabFt
             
         }
 
-        public async Task<List<ResultSearchDto>> GetDataAsync(RequestSearchDto requestData)
+        public async Task<ResultSearchDto> GetDataAsync(RequestSearchDto requestData)
         {
             var requestUrl = $"{_apiBaseUrl}{ConstantInfos.SearchEndPoint}";
             
@@ -43,7 +43,7 @@ namespace LabFt
                 throw new Exception($"Échec de l'obtention des données: {responseContent}");
             }
 
-            var data = Newtonsoft.Json.JsonConvert.DeserializeObject<List<ResultSearchDto>>(responseContent);
+            var data = Newtonsoft.Json.JsonConvert.DeserializeObject<ResultSearchDto>(responseContent);
             return data;
         }
     }
